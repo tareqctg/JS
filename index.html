@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #main
+     {
+        width: 600px;
+        border:1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        margin-bottom: auto;
+        text-align: center;
+        border-radius: 40px;
+        background-color: white;
+     }   
+     a{
+        padding: 10px;
+        text-align:center;
+        margin: 10px;
+        width: 5%;
+        background-color: rgb(9, 145, 199);
+        border-radius: 10px;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+     }
+     p{
+        text-align: center;
+        font-weight: bold;
+     }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Simple Calculator</h1>
+        <input type="text" placeholder="Enter First Number " id="numA">
+        <input type="text" placeholder="Enter Second Number " id="numB">
+        <p>Enter two numbers above and then click an option from below </p>
+            <a href="javascript:void(0);" onclick="LetsDoMath('+')">+</a>
+            <a href="javascript:void(0);" onclick="LetsDoMath('-')">-</a>
+            <a href="javascript:void(0);" onclick="LetsDoMath('*')">*</a>
+            <a href="javascript:void(0);" onclick="LetsDoMath('/')">/</a>
+            <p id="total">Result: 0</p>
+
+    </div>
+
+    <script>
+        function LetsDoMath(type)
+        {
+            var  numberA= parseInt(document.getElementById("numA").value);
+            var  numberB= parseInt(document.getElementById("numB").value);
+        
+           var total=document.getElementById("total");
+
+           switch(type)
+           {
+            case "+": total.innerHTML= "Total is: " + (numberA + numberB);
+                  break;
+            case "-": total.innerHTML= "Total is: " + (numberA - numberB);
+                  break;       
+            
+            case "*": total.innerHTML= "Total is: " + (numberA * numberB);
+                  break;
+            case "/": total.innerHTML= "Total is: " + (numberA / numberB);
+                  break;  
+        }
+        } 
+        
+        LetsD
+    
+    
+    </script>
+</body>
+</html>
